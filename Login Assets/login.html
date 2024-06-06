@@ -1,0 +1,79 @@
+<!-- Software Desenvolvido Por Daniel Duarte, Gabriel Lemos e Beatriz Romo
+Desenvolvido em 31/05/2024 - Versão 1.0.31 - Sistema de gerenciamento de médicos e inserçoes de RH -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/assets/N.png" type="image/x-icon">
+</head>
+<body>
+    
+    <h2>Desenvolvido por NXS</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="signUpForm">
+                <h1>Criar Conta Grátis</h1>
+                <br>
+                <input type="text" placeholder="Nome" id="signUpName" />
+                <input type="email" placeholder="Email" id="signUpEmail" />
+                <input type="password" placeholder="Senha" id="signUpPassword" />
+                <br>
+                <button type="submit">Cadastrar-se</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="signInForm">
+                <h1>Login</h1>
+                <br>
+                <input type="text" placeholder="Email" id="signInEmail" />
+                <input type="password" placeholder="Senha" id="signInPassword" />
+                <a href="/Senha.html">Esqueceu a senha?</a>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Olá Amigo!</h1>
+                    <p>Cadastre-se, e participe dessa jornada conosco! </p>
+                    <button class="ghost" id="signIn">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Bem vindo de volta!</h1>
+                    <p>Para estar conectado conosco, por favor insira suas credenciais de Login</p>
+                    <button class="ghost" id="signUp">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>
+            Criado por <i class="fa fa-heart"></i>
+            <a target="_blank" href="nxstech.netlify.app">NXS</a>
+            - Gostaria de saber mais? Veja meus projetos
+            <a target="_blank" href="https://github.com/Danielduarte3105">aqui</a>.
+        </p>
+    </footer>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Login feito com sucesso, você será redirecionado!</p>
+        </div>
+    </div>
+
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Usuário ou senha incorretos!</p>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+/* Atualizado para manter as características visuais da segunda página */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f6f5f7;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 2em;
+	font-weight: bold;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+header .login-button {
+	background-color: #FF4B2B;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 30px;
+	font-size: 0.71em;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: background-color 0.3s;
+}
+
+header .login-button:hover {
+	background-color: #ce1827c4;
+}
+
+#principal {
+	width: 90%;
+	max-width: 600px;
+	background-color: #ffffff;
+	border-radius: 15px;
+	padding: 50px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.37);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 150px; /* Ajuste a margem superior para ficar abaixo do header fixo */
+}
+
+#principal h1 {
+	font-weight: bold;
+	margin: 0 0 20px;
+	font-size: 1.5em;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+form label {
+	font-weight: bold;
+}
+
+form input {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 1em;
+}
+
+#Salvar {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #FF416C;
+	color: #fff;
+	border: none;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#Salvar:hover {
+	background-color: #FF416C;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-content {
+	background-color: #fff;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	max-width: 500px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#confirmModal button {
+	width: 130px;
+	height: 40px;
+	margin-top: 10px;
+	border-radius: 15px;
+	color: #fff;
+	background-color: #FF416C;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+#confirmModal button:hover {
+	background-color: #FF416C;
+}
+
+footer {
+	width: 100%;
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	font-size: 1em;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+/* Adicionando estilo para os cards no carrossel */
+.carousel-item {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 350px; /* Aumentando a largura do card */
+    margin: 0 15px; /* Espaçamento entre os cards */
+    border-radius: 15px;
+    border: 1px solid #ccc; /* Adicionando borda */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Aumentando a sombra */
+    overflow: hidden;
+    background-color: #fff; /* Garantindo fundo branco */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0; /* Cantos superiores arredondados */
+}
+
+.card .card-body {
+    padding: 25px; /* Aumentando o padding */
+}
+
+.card-title {
+    font-size: 1.7em; /* Aumentando o tamanho do título */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1.2em; /* Aumentando o tamanho do texto */
+    margin-bottom: 10px;
+}
+
+/* Estilo para o botão de navegação do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    background-color: rgba(139, 134, 134, 0.897);
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0f0000;
+}
+
+/* Estilo para o texto do header e do footer */
+header,
+footer {
+    font-size: 1.2em;
+}
+
+/* Estilo para o botão de login no header */
+header .login-button {
+    font-size: 1em;
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+
+/* Estilo para o botão de login no hover */
+header .login-button:hover {
+    background-color: #ce1827c4;
+}
