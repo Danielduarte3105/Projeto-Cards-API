@@ -48,6 +48,14 @@ const showModal = function(medico) {
     document.getElementById('modal-crm').textContent = `CRM: ${medico.crm}`;
     document.getElementById('modal-especialidade').textContent = `Especialidade: ${medico.especialidade}`;
     
+
+    document.getElementById('update-button').onclick = function() {
+        window.location.href = 'cadastro_medicos.html';
+    };
+    document.getElementById('register-button').onclick = function() {
+        window.location.href = 'cadastro_medicos.html';
+    };
+    
     modal.style.display = "flex";
 };
 
