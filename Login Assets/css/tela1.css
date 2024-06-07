@@ -193,41 +193,49 @@ footer {
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 15px 15px 0 0; /* Cantos superiores arredondados */
+    border-radius: 0px 0px 15px 15px; /* Cantos superiores arredondados */
 }
 
 .card .card-body {
+	width: 100%; /* Define a largura do corpo do card */
+    padding: 25px; /* Espaçamento interno */
+    background: linear-gradient(to right, #FF4B2B, #FF416C); /* Fundo gradiente */
+    color: #fff; /* Texto branco */
+    display: flex;
+    flex-direction: column; /* Direção dos elementos dentro do corpo */
+    justify-content: center; /* Centraliza verticalmente os elementos */
+    border-radius: 0 15px 15px 0;
     padding: 25px; /* Aumentando o padding */
 }
 
 .card-title {
-    font-size: 1.7em; /* Aumentando o tamanho do título */
+    font-size: 25px; /* Aumentando o tamanho do título */
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .card-text {
-    font-size: 1.2em; /* Aumentando o tamanho do texto */
-    margin-bottom: 10px;
+    font-size: 15px; /* Aumentando o tamanho do texto */
+    margin-bottom: 105px;
 }
 
 /* Estilo para o botão de navegação do carrossel */
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%;
-    background-color: rgba(139, 134, 134, 0.897);
+    background-color: rgba(83, 80, 80, 0.959);
     border-radius: 50%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #0f0000;
+    background-color: #535252;
 }
 
 /* Estilo para o texto do header e do footer */
 header,
 footer {
-    font-size: 1.2em;
+    font-size: 17px;
 }
 
 /* Estilo para o botão de login no header */
