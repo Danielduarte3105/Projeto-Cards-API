@@ -20,7 +20,7 @@ const setListDados = function(dadosMedicos) {
     dadosMedicos.medicos.forEach(function(medico, index) {
         cards += `
             <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                <div class="card">
+                <div class="card" data-index="${index}">
                     <img src="${medico.image}" class="card-img-top" alt="${medico.nome}">
                     <div class="card-body">
                         <h5 class="card-title">${medico.nome}</h5>
@@ -31,8 +31,25 @@ const setListDados = function(dadosMedicos) {
             </div>`;
     });
     carouselInner.innerHTML = cards;
+
+    // Adiciona evento de clique aos cards
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function() {
+            let index = this.getAttribute('data-index');
+            showModal(medicos[index]);
+        });
+    });
 };
 
+const showModal = function(medico) {
+    let modal = document.getElementById('medicoModal');
+    document.getElementById('modal-img').src = medico.image;
+    document.getElementById('modal-title').textContent = medico.nome;
+    document.getElementById('modal-crm').textContent = `CRM: ${medico.crm}`;
+    document.getElementById('modal-especialidade').textContent = `Especialidade: ${medico.especialidade}`;
+    
+    modal.style.display = "flex";
+};
 
 document.addEventListener('DOMContentLoaded', function() {
     getAPIMedicos();
@@ -40,5 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configura o carrossel para rolar automaticamente
     $('#carouselExample').carousel({
         interval: 5000 
+    });
+
+    // Fecha o modal quando clicar no "x"
+    document.querySelector('.close').addEventListener('click', function() {
+        document.getElementById('medicoModal').style.display = "none";
+    });
+
+    // Fecha o modal quando clicar fora do modal
+    window.addEventListener('click', function(event) {
+        let modal = document.getElementById('medicoModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     });
 });
